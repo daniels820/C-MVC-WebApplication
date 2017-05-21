@@ -1,0 +1,108 @@
+body{
+    background: #E9EBEE !important;
+}
+
+input.search-query {
+    padding-left:26px;
+}
+
+form.form-search {
+    position: relative;
+}
+
+form.form-search:before {
+    content:'';
+    display: block;
+    width: 14px;
+    height: 14px;
+    background-image: url(http://getbootstrap.com/2.3.2/assets/img/glyphicons-halflings.png);
+    background-position: -48px 0;
+    position: absolute;
+    top:8px;
+    left:8px;
+    opacity: .5;
+    z-index: 1000;
+}
+
+.table{
+    background: #FFFFFF;
+
+}
+
+.toolbar{
+    margin-bottom: 15px;
+    background: #FFFFFF;
+    padding: 15px;
+    margin: 10px, 0px, 0px, 0px !important;
+    /*margin-top: 10px;
+    margin-left: 0px !important;
+    margin-right: 0px !important;*/
+    padding-right: 4px !important;
+}
+
+.form-search input[type=text] {
+    margin: auto;
+    display: block;
+    background-size: 36px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 18px;
+    /* background-color: white; */
+    background-image: url(../assets/images/searchicon.png);
+    background-position: 6px 7px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 50px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+.form-search input[type=text]:focus {
+    width: 100%;
+}
+
+thead a{
+    color: #000;
+}
+td .btn {
+    width: 50% !important;
+}
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid blue;
+    border-bottom: 16px solid blue;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/*@media screen and (max-width: 448px) {
+    input.search-query {
+     
+    }
+
+
+}*/

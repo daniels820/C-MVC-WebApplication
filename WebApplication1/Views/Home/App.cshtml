@@ -1,0 +1,101 @@
+﻿ <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>test</title>
+
+        <link rel="stylesheet" href="~/assets/font-awesome-4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="~/css/style.css">
+
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.0.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
+              integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script data-require="angular.js@1.0.x" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js" data-semver="1.0.8"></script>
+
+        <!-- local js -->
+        <script src="~/js/app.js"></script>
+        <script src="~/js/controllers/tableController.js"></script>
+        <script src="~/js/services/tableService.js"></script>
+
+
+    </head>
+    <body ng-app="app" ng-controller='TableCtrl'>
+
+        <div class="container">
+
+            <div class="row toolbar" style="padding: 15px; background: #E9EBEE !important;">
+             
+                <div class="col-xs-5 col-xs-offset-3 form-search form-inline" style="display: inline;">
+                    <input ng-model="searchBox" type="text" class="search-query" placeholder="Search..."  />
+                  
+             
+                </div>
+                <div class="col-xs-4" style="white-space:nowrap">
+                    <button type="button" class="btn btn-warning" style="width:50%; font-size: 12px; padding:12px 10px 12px 10px; margin-top: 4px;" ng-click="DeviceByOwnerName(searchBox)">Get Device By Owner</button>
+                    <button type="button" class="btn btn-warning" style="width:50%; font-size: 12px; padding:12px 10px 12px 10px; margin-top: 4px; " ng-click="GetAllDevices()">Get All Devices</button>
+
+                </div>
+
+            </div>
+
+            <div id="container">
+                <table class=" container table ">
+
+                    <thead>
+                        <tr>
+                            <th data-key="Name">
+                                <a href="#" ng-click="sortType = 'Name'; sortReverse = !sortReverse">
+                                  Device  ID
+                                    <span ng-show="sortType == 'Name' && !sortReverse" class="fa fa-caret-down"></span>
+                                    <span ng-show="sortType == 'Name' && sortReverse" class="fa fa-caret-up"></span>
+                                </a>
+                            </th>
+                            <th data-key="Address">
+                                <a href="#" ng-click="sortType = 'Address'; sortReverse = !sortReverse">
+                                    Device 
+                                    <span ng-show="sortType == 'Address' && !sortReverse" class="fa fa-caret-down"></span>
+                                    <span ng-show="sortType == 'Address' && sortReverse" class="fa fa-caret-up"></span>
+                                </a>
+                            </th>
+                          
+                            <th>OwnerId</th>
+                            <th>Owner Name </th>
+                            <th>Date Created</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        
+                     
+                        <!--The Table with the ng-show function -->
+                        <tr ng-hide="updateBool" ng-repeat="device in people | orderBy:sortType:sortReverse | filter:searchBox">
+                            <td>{{device.deviceId}}</td>
+                            <td>{{device.name}}</td>
+                            <td>{{device.ownerId}}</td>
+                            <td>{{device.fullName}}</td>
+                            <td>{{device.created}}</td>
+                        </tr>
+
+                        <!--DeviceByName Table -->
+                        @*<tr  ng-show="DeviceByName" ng-repeat="device1 in DeviceByName | orderBy:sortType:sortReverse | filter:searchBox">
+                            <td>{{device1.deviceId}}</td>
+                            <td>{{device1.name}}</td>
+                            <td>{{device1.ownerId}}</td>
+                            <td>{{device.fullName}}</td>
+                            <td>{{device1.created}}</td>
+                        </tr>*@
+
+                    </tbody>
+                </table>
+              
+
+
+            </div>
+
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,48 @@
+@model DAL.EF.Models.Users
+@{
+    ViewData["Title"] = "Login";
+}
+
+
+<div class="row">
+    <div class=" col-xs-6 ">
+       <h1 > Hello Please Log in First ... </h1>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-offset-3 col-xs-6 ">
+        <form class="form-horizontal" asp-controller="Home" asp-action="Login" method="post">
+            
+            <div class="form-group">
+                <label asp-for="Username" class="col-md-2 control-label"></label>
+                <div class="col-md-10">
+                    <input asp-for="Username" class="form-control" />
+                    <span asp-validation-for="Username" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group">
+         
+                <label class="col-md-2 control-label"> Password </label>
+                <div class="col-md-10">
+                    <input asp-for="HashPassword" class="form-control" />
+                    <span asp-validation-for="HashPassword" class="text-danger"></span>
+                </div>
+            </div>
+            <div asp-validation-summary="ModelOnly" class="col-md-10 col-xs-offset-1 text-danger"></div>
+            <div class="form-group">
+                <div class="col-md-offset-4 col-md-10">
+                    <button id="Login" type="submit" class="btn btn-primary">Login</button>
+                    <br/>
+                    <div class="loader"></div>
+                </div>
+            </div>
+           
+
+        </form>
+    </div>
+
+</div>               
+
+
+

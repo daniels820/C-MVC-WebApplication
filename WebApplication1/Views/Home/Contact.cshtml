@@ -1,0 +1,92 @@
+﻿@using DAL.EF.Models
+@model List<Devices>
+@{
+    foreach (var d in Model)
+    {
+        <b>@d.Name</b>
+
+    }
+}
+
+
+@{
+    ViewData["Title"] = "Contact";
+}
+
+
+<asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
+
+      Index
+
+</asp:Content>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+
+    <h2>Index</h2>
+
+    <table>
+
+        <tr>
+         <th>
+                DeviceId
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                OwnerId
+            </th>
+            <th>
+                Created
+            </th>
+            <th>
+                Owner
+            </th>
+        </tr>
+
+  @{
+      foreach (var d in Model)
+      {
+        <tr>
+            <td>
+               @d.DeviceId
+            </td>
+            <td>
+                @d.Name
+            </td>
+            <td>
+                @d.OwnerId
+            </td>
+            <td>
+                @d.Created
+            </td>
+            <td>
+                @d.Owner
+            </td>
+        </tr>
+
+      }
+    }
+
+
+    </table>
+
+
+</asp:Content>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2>@ViewData["Title"].</h2>
+<h3>@ViewData["Message"]</h3>
+
+

@@ -1,0 +1,91 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp1.1</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageTargetFallback>$(PackageTargetFallback);portable-net45+win8+wp8+wpa81;</PackageTargetFallback>
+    <StartupObject />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="wwwroot\assets\font-awesome-4.7.0\css\font-awesome.css" />
+    <Content Include="wwwroot\assets\font-awesome-4.7.0\css\font-awesome.min.css" />
+    <Content Include="wwwroot\assets\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="wwwroot\assets\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="wwwroot\assets\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="wwwroot\assets\font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="wwwroot\assets\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
+    <Content Include="wwwroot\assets\font-awesome-4.7.0\fonts\FontAwesome.otf" />
+    <Content Include="wwwroot\assets\font-awesome-4.7.0\HELP-US-OUT.txt" />
+    <Content Include="wwwroot\assets\font-awesome-4.7.0\less\animated.less" />
+    <Content Include="wwwroot\assets\font-awesome-4.7.0\less\bordered-pulled.less" />
+    <Content Include="wwwroot\assets\font-awesome-4.7.0\less\core.less" />
+    <Content Include="wwwroot\assets\font-awesome-4.7.0\less\fixed-width.less" />
+    <Content Include="wwwroot\assets\font-awesome-4.7.0\less\font-awesome.less" />
+    <Content Include="wwwroot\assets\font-awesome-4.7.0\less\icons.less" />
+    <Content Include="wwwroot\assets\font-awesome-4.7.0\less\larger.less" />
+    <Content Include="wwwroot\assets\font-awesome-4.7.0\less\list.less" />
+    <Content Include="wwwroot\assets\font-awesome-4.7.0\less\mixins.less" />
+    <Content Include="wwwroot\assets\font-awesome-4.7.0\less\path.less" />
+    <Content Include="wwwroot\assets\font-awesome-4.7.0\less\rotated-flipped.less" />
+    <Content Include="wwwroot\assets\font-awesome-4.7.0\less\screen-reader.less" />
+    <Content Include="wwwroot\assets\font-awesome-4.7.0\less\stacked.less" />
+    <Content Include="wwwroot\assets\font-awesome-4.7.0\less\variables.less" />
+    <Content Include="wwwroot\assets\font-awesome-4.7.0\scss\font-awesome.scss" />
+    <Content Include="wwwroot\assets\font-awesome-4.7.0\scss\_animated.scss" />
+    <Content Include="wwwroot\assets\font-awesome-4.7.0\scss\_bordered-pulled.scss" />
+    <Content Include="wwwroot\assets\font-awesome-4.7.0\scss\_core.scss" />
+    <Content Include="wwwroot\assets\font-awesome-4.7.0\scss\_fixed-width.scss" />
+    <Content Include="wwwroot\assets\font-awesome-4.7.0\scss\_icons.scss" />
+    <Content Include="wwwroot\assets\font-awesome-4.7.0\scss\_larger.scss" />
+    <Content Include="wwwroot\assets\font-awesome-4.7.0\scss\_list.scss" />
+    <Content Include="wwwroot\assets\font-awesome-4.7.0\scss\_mixins.scss" />
+    <Content Include="wwwroot\assets\font-awesome-4.7.0\scss\_path.scss" />
+    <Content Include="wwwroot\assets\font-awesome-4.7.0\scss\_rotated-flipped.scss" />
+    <Content Include="wwwroot\assets\font-awesome-4.7.0\scss\_screen-reader.scss" />
+    <Content Include="wwwroot\assets\font-awesome-4.7.0\scss\_stacked.scss" />
+    <Content Include="wwwroot\assets\font-awesome-4.7.0\scss\_variables.scss" />
+    <Content Include="wwwroot\assets\images\searchicon.png" />
+    <Content Include="wwwroot\assets\json\people.json" />
+    <Content Include="wwwroot\css\style.css" />
+    <Content Include="wwwroot\js\app.js" />
+    <Content Include="wwwroot\js\controllers\tableController.js" />
+    <Content Include="wwwroot\js\services\tableService.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore" Version="1.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Cryptography.KeyDerivation" Version="1.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="1.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="1.1.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.TagHelpers" Version="1.1.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Session" Version="1.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="1.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="1.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="1.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="1.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer.Design" Version="1.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="1.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="1.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="1.1.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="1.1.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="1.1.0" />
+    <PackageReference Include="runtime.native.System.Security.Cryptography" Version="4.0.0" />
+    <PackageReference Include="System.ObjectModel" Version="4.3.0" />
+    <PackageReference Include="System.Security.Cryptography.Algorithms" Version="4.3.0" />
+    <PackageReference Include="System.Security.Cryptography.Cng" Version="4.3.0" />
+    <PackageReference Include="System.Security.Cryptography.Encoding" Version="4.3.0" />
+    <PackageReference Include="System.Security.Cryptography.Primitives" Version="4.3.0" />
+    <PackageReference Include="System.Security.Cryptography.X509Certificates" Version="4.3.0" />
+    <PackageReference Include="System.Security.SecureString" Version="4.3.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="1.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAL.EF\DAL.EF.csproj" />
+  </ItemGroup>
+
+</Project>
